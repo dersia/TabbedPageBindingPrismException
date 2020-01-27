@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TabbedPageBindingPrismException.DataTemplates.TabbedDetailPage">
+
+    <DataTemplate x:Key="tabbedDetailPage">
+        <ContentPage Title="{Binding Title}" BackgroundColor="White">
+            <StackLayout Padding="20,5,20,5" BackgroundColor="White" >
+                <Grid Padding="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Text1}" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Text2}" />
+                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding Text3}" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Text4}" />
+                </Grid>
+            </StackLayout>
+        </ContentPage>
+    </DataTemplate>
+</ResourceDictionary>

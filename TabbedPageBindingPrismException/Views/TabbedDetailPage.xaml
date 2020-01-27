@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converter="clr-namespace:TabbedPageBindingPrismException.Converter"
+            xmlns:dt="clr-namespace:TabbedPageBindingPrismException.DataTemplates"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             mc:Ignorable="d"
+             ItemsSource="{Binding Items}"
+			 ItemTemplate="{StaticResource tabbedDetailPage}"
+             x:Class="TabbedPageBindingPrismException.Views.TabbedDetailPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <SearchBar BackgroundColor="White" TextColor="Black" Placeholder="Search..." PlaceholderColor="Gray" CancelButtonColor="Gray" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <dt:TabbedDetailPage />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+</TabbedPage>
